@@ -69,7 +69,7 @@ body {
 	background: #ccc;
 }
 
-#centercolumn { 
+.centercolumn { 
  float: left;
  color: #39a9dc;
  border: 0px solid #ccc;
@@ -84,13 +84,13 @@ body {
     border-radius: 20px;
 }
 
-#rightcolumn { 
+.rightcolumn { 
  float: left;
  color: #39a9dc;
  border: 0px solid #ccc;
  background: #ccc;
  margin: 0px 0px 0px 20px;
- padding: 10px;
+ padding: 9px;
  height: 340px;
  width: 150px;
  display: inline;
@@ -99,7 +99,7 @@ body {
     border-radius: 20px;
 }
 
-#largecolumn { 
+.largecolumn { 
  float: right;
  color: #39a9dc;
  border: 0px solid #ccc;

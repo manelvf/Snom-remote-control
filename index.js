@@ -108,3 +108,31 @@ function setSetting(form){
     var commandUrl = form.proto.value + '://' + form.phone.value + ':' + form.port.value + '/dummy.htm?settings=save&' + setting_name + '=' + setting_value; 
     sendHttpReq(commandUrl);    
 }
+
+fetch('control.html')
+  .then(response => {
+    return response.text()
+  })
+  .then(data => {
+    let leftcolumn = document.getElementById("leftcolumn")
+    leftcolumn.insertAdjacentHTML('afterbegin', data)
+    leftcolumn.insertAdjacentHTML('afterbegin', '<br/>')
+    leftcolumn.insertAdjacentHTML('afterbegin', data)
+    leftcolumn.insertAdjacentHTML('afterbegin', '<br/>')
+    leftcolumn.insertAdjacentHTML('afterbegin', data)
+
+  });
+
+fetch('screen.html')
+  .then(response => {
+    return response.text()
+  })
+  .then(data => {
+    let wrapper = document.getElementById("wrapper")
+    wrapper.insertAdjacentHTML('beforeend', data)
+    wrapper.insertAdjacentHTML('beforeend', '<br/>')
+    wrapper.insertAdjacentHTML('beforeend', data)
+    wrapper.insertAdjacentHTML('beforeend', '<br/>')
+    wrapper.insertAdjacentHTML('beforeend', data)
+
+  });
