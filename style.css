@@ -1,0 +1,144 @@
+/* Main CSS file */
+
+* { padding: 0; margin: 0; }
+
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 12px;
+}
+
+#wrapper { 
+ margin: 0 auto;
+ width: 922px;
+
+}
+#header {
+ color: #333;
+ width: 900px;
+ float: left;
+ padding: 10px;
+ border: 0px;
+ height: 30px;
+ margin: 10px 0px 5px 0px;
+ /*background: #015C87;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+ */
+}
+#leftcolumn {
+	height: 340px;
+	float: left;
+}
+#leftcolumn form { 
+ color: #39a9dc;
+ border: 1px solid #ccc;
+ background: #fff;
+ margin: 0px 5px 5px 0px;
+ font-weight: bold;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+ padding: 10px;
+ width: 235px;
+ float: left;
+}
+
+#title { 
+ color: #555;
+ /* 
+ border: 0px solid #ccc;
+ background: #ccc;
+ */
+ margin: 0px 5px 5px 0px;
+}
+
+#leftcolumn h2 {
+	color: #39a9dc;
+	margin: 10px;
+}
+#leftcolumn input {
+	width: 95px;
+	border: 1px solid #39a9dc;
+	padding: 3px;
+}
+#leftcolumn .button {
+	border: 1px solid #ccc;
+	margin: 3px;
+	padding: 3px;
+	background: #ccc;
+}
+
+#centercolumn { 
+ float: left;
+ color: #39a9dc;
+ border: 0px solid #ccc;
+ background: #ccc;
+ margin: 0px 0px 0px 0px;
+ padding: 10px;
+ height: 340px;
+ width: 450px;
+ display: inline;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+
+#rightcolumn { 
+ float: left;
+ color: #39a9dc;
+ border: 0px solid #ccc;
+ background: #ccc;
+ margin: 0px 0px 0px 20px;
+ padding: 10px;
+ height: 340px;
+ width: 150px;
+ display: inline;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+
+#largecolumn { 
+ float: right;
+ color: #39a9dc;
+ border: 0px solid #ccc;
+ background: #ccc;
+ margin: 20px 0px 0px 0px;
+ padding: 10px;
+ height: 450px;
+ width: 640px;
+ display: inherit;
+ -moz-border-radius: 20px;
+ -webkit-border-radius: 20px;
+ border-radius: 20px;
+}
+
+#keypaddelme {
+ /*float: right;*/
+ color: #007abf;
+ border: 0px solid #ccc;
+ background: #fdc00d;
+ margin: 0px 0px 5px 0px;
+ padding: 10px;
+ height: 200px;
+ width: 638px;
+ display: inline;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+
+}
+#footer { 
+ width: 900px;
+ clear: both;
+ color: #333;
+ border: 0px solid #ccc;
+ background: #;
+ margin: 0px 0px 10px 0px;
+ padding: 10px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+input { margin: 5px;}
