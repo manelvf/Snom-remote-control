@@ -114,12 +114,14 @@ fetch('control.html')
     return response.text()
   })
   .then(data => {
-    let leftcolumn = document.getElementById("leftcolumn")
+    const data2 = data.replace("form1", "form2")
+    const data3 = data.replace("form1", "form3")
+    const leftcolumn = document.getElementById("leftcolumn")
     leftcolumn.insertAdjacentHTML('afterbegin', data)
     leftcolumn.insertAdjacentHTML('afterbegin', '<br/>')
-    leftcolumn.insertAdjacentHTML('afterbegin', data)
+    leftcolumn.insertAdjacentHTML('afterbegin', data2)
     leftcolumn.insertAdjacentHTML('afterbegin', '<br/>')
-    leftcolumn.insertAdjacentHTML('afterbegin', data)
+    leftcolumn.insertAdjacentHTML('afterbegin', data3)
 
   });
 

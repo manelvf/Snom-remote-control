@@ -1,4 +1,5 @@
-					<form name="form">
+<div>
+					<form name="form" id="form1">
 					<h2>Phone:</h2>
                     <div><label>Phone IP: </label><input type="text" name="phone"/></div>
                     <!-- FIXME: browser security checks will not allow HTTPS-->
@@ -18,21 +19,21 @@
                         <label>View phone display</label>
                     </div>
 					<div>
-						<input class="button" type="button" name="button" value="Start Video" onClick='startVideo(this.form, "screen");' />
+						<input class="button" type="button" name="button" value="Start Video" onClick='startVideo(this.form1, "screen");' />
 						<input class="button" type="button" name="button" value="Stop Video" onClick="stopVideo('screen');" />
                     </div>
 					<div>
                         <label>View phone labels</label>
                     </div>
 					<div>
-						<input class="button" type="button" name="button" value="Start Video" onClick='startVideo(this.form, "label");' />
+						<input class="button" type="button" name="button" value="Start Video" onClick='startVideo(this.form1, "label");' />
 						<input class="button" type="button" name="button" value="Stop Video" onClick="stopVideo('label');" />
                     </div>
 					<div>
                         <label>View Exp. screen</label>
                     </div>
 					<div>
-						<input class="button" type="button" name="button" value="Start Video" onClick='startVideo(this.form, "exp");' />
+						<input class="button" type="button" name="button" value="Start Video" onClick='startVideo(this.form1, "exp");' />
 						<input class="button" type="button" name="button" value="Stop Video" onClick="stopVideo('exp');" />
                     </div>
                     <hr/>
@@ -113,3 +114,4 @@
                     </div>
  
 					</form>
+</div>

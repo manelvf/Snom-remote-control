@@ -27,7 +27,7 @@ body {
  */
 }
 #leftcolumn {
-	height: 340px;
+	/* height: 340px; */
 	float: left;
 }
 #leftcolumn form { 
