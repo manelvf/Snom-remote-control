@@ -24,22 +24,22 @@ function sendHttpReq(url){
 }
 
 var screenUrl;
-function startVideo(form, image) {
+function startVideo(form, image, ndx) {
     switch(image){
         case 'screen':
             var imageFile = '/screen.bmp';
-            var screenBufferId = '#screen-buffer';
-            var screenDisplayedId = '#screen-displayed';
+            var screenBufferId = '#screen-buffer' + ndx;
+            var screenDisplayedId = '#screen-displayed' + ndx;
             break;
         case 'label':
             var imageFile = '/label_screen.bmp';
-            var screenBufferId = '#label-buffer';
-            var screenDisplayedId = '#label-displayed';
+            var screenBufferId = '#label-buffer' + ndx;
+            var screenDisplayedId = '#label-displayed' + ndx;
             break;
         case 'exp':
             var imageFile = '/exp_screen.bmp';
-            var screenBufferId = '#exp-buffer';
-            var screenDisplayedId = '#exp-displayed';
+            var screenBufferId = '#exp-buffer' + ndx;
+            var screenDisplayedId = '#exp-displayed' + ndx;
             break;
     }
     //TODO: Fix auth issue (XDR issue)
@@ -114,10 +114,12 @@ fetch('control.html')
     return response.text()
   })
   .then(data => {
-    const data2 = data.replace("form1", "form2")
-    const data3 = data.replace("form1", "form3")
+    const data1 = data.replace("ndx1", "1")
+    const data2 = data.replace(/form1/g, "form2").replace("ndx1", "2")
+    const data3 = data.replace(/form1/g, "form3").replace("ndx1", "3")
+    console.log(data3)
     const leftcolumn = document.getElementById("leftcolumn")
-    leftcolumn.insertAdjacentHTML('afterbegin', data)
+    leftcolumn.insertAdjacentHTML('afterbegin', data1)
     leftcolumn.insertAdjacentHTML('afterbegin', '<br/>')
     leftcolumn.insertAdjacentHTML('afterbegin', data2)
     leftcolumn.insertAdjacentHTML('afterbegin', '<br/>')
@@ -130,11 +132,21 @@ fetch('screen.html')
     return response.text()
   })
   .then(data => {
-    let wrapper = document.getElementById("wrapper")
-    wrapper.insertAdjacentHTML('beforeend', data)
+    const data2 = data.replace(/buffer1/g, "buffer2").replace(/displayed1/g, "displayed2")
+    const data3 = data.replace(/buffer1/g, "buffer3").replace(/displayed1/g, "displayed3")
+    const wrapper = document.getElementById("wrapper")
+    wrapper.insertAdjacentHTML('beforeend', data3)
     wrapper.insertAdjacentHTML('beforeend', '<br/>')
-    wrapper.insertAdjacentHTML('beforeend', data)
+    wrapper.insertAdjacentHTML('beforeend', data2)
     wrapper.insertAdjacentHTML('beforeend', '<br/>')
     wrapper.insertAdjacentHTML('beforeend', data)
 
   });
+
+/*
+fetch('phones.json')
+  .then(response => response.json())
+  .then(data => {
+      console.log(data)
+  })
+*/
